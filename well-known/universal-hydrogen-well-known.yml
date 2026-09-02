@@ -1,0 +1,126 @@
+generated: '2026-09-02'
+method: probed
+source: >-
+  Direct HTTP probes of every host associated with Universal Hydrogen Co. — its own
+  primary domain hydrogen.aero (and www.), plus the domain universalhydrogen.com.
+  Probed 2026-09-02.
+name: Universal Hydrogen well-known probe
+description: >-
+  Universal Hydrogen Co. ceased operations and liquidated in June 2024. Its primary web
+  host hydrogen.aero (and www.hydrogen.aero) now answers HTTP 404 "Unknown site" on the
+  root and on every /.well-known/ and specification path — the DNS A record still resolves
+  to 3.96.23.237 but no site is served behind it. The secondary domain
+  universalhydrogen.com resolves to 91.195.240.94, a Sedo domain-parking lander with a
+  wildcard catch-all: it answers HTTP 200 on /llms.txt and /api-docs with a byte-identical
+  Sedo parking HTML page (title "universalhydrogen.com - universalhydrogen Resources and
+  Information"), and answers CHEQ bot-filter codes 440/441 on the rest. NONE of those 200s
+  is a document — they are soft-200 parking responses and are recorded here as misses.
+  No /.well-known/ document was found on any host, so NO WellKnown or SecurityTxt pointer
+  is emitted in apis.yml.
+hosts:
+- host: hydrogen.aero
+  note: >-
+    Universal Hydrogen Co.'s own primary domain, still named as the blog URL on its GitHub
+    organization. Serves a bare 404 "Unknown site" page on every path.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: www.hydrogen.aero
+  note: 404 "Unknown site" on the root; identical catch-all to the apex.
+  documents:
+  - path: /
+    status: 404
+    file: null
+- host: universalhydrogen.com
+  note: >-
+    Sedo parked domain (91.195.240.94) with a wildcard catch-all. The 200 responses are the
+    Sedo parking lander, not documents; 440/441 are CHEQ bot-filter rejections.
+  documents:
+  - path: /.well-known/security.txt
+    status: 440
+    file: null
+  - path: /.well-known/api-catalog
+    status: 440
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 440
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 440
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 441
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 441
+    file: null
+  - path: /.well-known/agent.json
+    status: 441
+    file: null
+contract_discovery:
+  note: >-
+    STEP 0b contract discovery run in full against every host. No OpenAPI, Swagger, GraphQL,
+    MCP or A2A surface exists.
+  probes:
+  - url: https://hydrogen.aero/openapi.json
+    status: 404
+  - url: https://hydrogen.aero/swagger.json
+    status: 404
+  - url: https://hydrogen.aero/api-docs
+    status: 404
+  - url: https://hydrogen.aero/llms.txt
+    status: 404
+  - url: https://universalhydrogen.com/openapi.json
+    status: 441
+  - url: https://universalhydrogen.com/swagger.json
+    status: 441
+  - url: https://universalhydrogen.com/api-docs
+    status: 200
+    verdict: soft-200 — Sedo parking HTML, not a document
+  - url: https://universalhydrogen.com/llms.txt
+    status: 200
+    verdict: soft-200 — Sedo parking HTML, not a document
+  - url: https://api.github.com/orgs/universal-hydrogen
+    status: 200
+    verdict: >-
+      Real Universal Hydrogen Co. GitHub organization (id 71728862, created 2020-09-22,
+      blog https://www.hydrogen.aero, email hello@hydrogen.aero) — public_repos is 0, so
+      no published .proto, WSDL, SDK or specification exists there.
+  - url: https://registry.npmjs.org/universal-hydrogen
+    status: 404
+  - url: https://pypi.org/pypi/universal-hydrogen/json
+    status: 404
+  dns:
+  - host: api.hydrogen.aero
+    result: NXDOMAIN — no record
+  - host: docs.hydrogen.aero
+    result: NXDOMAIN — no record
+  - host: developers.hydrogen.aero
+    result: NXDOMAIN — no record
+  - host: api.universalhydrogen.com
+    result: 91.195.240.94 — Sedo parking wildcard, not an API host
+  wayback:
+    query: http://web.archive.org/cdx/search/cdx?url=hydrogen.aero*
+    result: >-
+      Fewer than 3 records returned; no developer, docs, api, swagger, openapi or graphql
+      path is present in the archive for this domain.
+result: none
