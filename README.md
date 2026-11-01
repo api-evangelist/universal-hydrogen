@@ -64,5 +64,34 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Universal Hydrogen is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/universal-hydrogen_stock/
+> **No longer operating.** This company or product has shut down, been discontinued, or been deprecated. This profile is kept as a historical record and is not maintained or rated.
+
+Universal Hydrogen Co. was a Hawthorne, California hydrogen-aviation startup founded in 2020 by former Airbus CTO Paul Eremenko to decarbonize regional air travel. Rather than building a hydrogen pipeline network, it proposed a modular capsule model: lightweight hydrogen capsules loaded into aircraft with existing cargo handling equipment, paired with fuel-cell powertrain conversion kits for regional turboprops such as the ATR 72 and De Havilland Dash 8. In March 2023 it flew a converted Dash 8-300 testbed with one propeller driven by a hydrogen fuel cell. The company raised roughly $100 million from backers including GE Aviation, American Airlines, JetBlue Ventures, Airbus Ventures, Toyota Ventures and Mitsubishi. Unable to raise further equity or debt or to find a buyer, it ceased operations on 27 June 2024 and liquidated. It was a hardware and fuel-logistics business and never shipped a public API, SDK, developer portal or machine-readable specification; its domains no longer serve a site.
+
+**Areas:** Company · Defunct · Aviation · Aerospace · Hydrogen · Clean Energy · Fuel Cells · Sustainability · Decarbonization · Hardware · Logistics
+
+## Universal Hydrogen on APIs.io (historical record)
+
+Everything profiled for Universal Hydrogen is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/universal-hydrogen/](https://apis.io/providers/universal-hydrogen/)** — or go straight to one of the APIs or properties below.
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [GitHub](https://github.com/universal-hydrogen)
+
+## API Evangelist rating
+
+**Not rated** — this company is recorded as no longer operating, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Universal Hydrogen: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/universal-hydrogen/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
